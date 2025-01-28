@@ -18,6 +18,9 @@ export const metadata: Metadata = {
   title: "DevFlow",
   description:
     "DevFlow is a platform for developers to share their knowledge and learn from each other.",
+  icons: {
+    icon: "/images/site-logo.svg",
+  },
 };
 
 export default function RootLayout({
