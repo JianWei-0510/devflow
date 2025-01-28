@@ -1,9 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { ThemeToggle } from "./theme-toggle";
+
 export const NavHeader = () => {
   return (
-    <nav className="flex-between background-light900_dark200 sticky top-0 gap-5 bg-red-200 p-4 shadow-light-300 dark:shadow-none">
+    <nav className="flex-between background-light900_dark200 sticky top-0 gap-5 bg-red-200 px-4 py-3 shadow-light-300 dark:shadow-none">
       <Link href="/" className="flex items-center gap-2">
         <Image
           src="/images/site-logo.svg"
@@ -18,7 +20,7 @@ export const NavHeader = () => {
 
       <p>Global Search</p>
 
-      <div className="flex-between gap-5">Theme</div>
+      <ThemeToggle />
     </nav>
   );
 };
