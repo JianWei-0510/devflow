@@ -6,6 +6,7 @@ const config: Config = {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -52,10 +53,10 @@ const config: Config = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
-      backgroundImage: {
-        "auth-dark": 'url("/images/auth-dark.png")',
-        "auth-light": 'url("/images/auth-light.png")',
-      },
+      // backgroundImage: {
+      //   "auth-dark": 'url("/images/auth-dark.png")',
+      //   "auth-light": 'url("/images/auth-light.png")',
+      // },
     },
   },
   // plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
