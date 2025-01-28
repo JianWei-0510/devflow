@@ -3,6 +3,7 @@ import { Inter, Space_Grotesk as SpaceGrotesk } from "next/font/google";
 import React from "react";
 
 import "./globals.css";
+import { ThemeProvider } from "@/components/provider/theme-provider";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -32,7 +33,13 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${inter.className} ${spaceGrotesk.variable} antialiased`}>
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
