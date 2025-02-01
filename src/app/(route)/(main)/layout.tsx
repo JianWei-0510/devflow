@@ -1,6 +1,5 @@
-import { NavHeader } from "@/components/navigation/nav-header";
 import { SidebarLeft } from "@/components/navigation/sidebar-left";
-import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
+import { SidebarInset } from "@/components/ui/sidebar";
 
 export default function MainLayout({
   children,
@@ -8,12 +7,11 @@ export default function MainLayout({
   children: React.ReactNode;
 }) {
   return (
-    <SidebarProvider>
+    <div className="flex flex-1">
       <SidebarLeft />
       <SidebarInset>
-        <NavHeader />
         <div className="flex flex-1 flex-col gap-4 p-4">{children}</div>
       </SidebarInset>
-    </SidebarProvider>
+    </div>
   );
 }
